@@ -1,0 +1,588 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=sunburst-simple&code=G4QwTgBAJiAuIQLwQNoFgBQEIG9PewDsQBbAUwC4IByQdWVAauUCA9agGnwIGMALASwBsoYMoSrosBbHnESipSjUAhzoDNrQFzKrdjIig-AV3kB2NtJnd-g4aI0Epm2eSrVAoRaBbtUANpoEVzQOoRgZQT1xidp6VACMRpoAvmEyNrbE9jSunoDHyj5-tloguvKhVtiRubgFdvLUyoAXqalRmoHZVQT5_oWNxQ6AgKmAi4levnUBmUEQOY0NmjGacSWARX6AjjqVRRlZIT0Qw9Fz4w6AutqArmmA1sqzzfP9gxFLozLrikqAanb76TWLBSvYALqPp2tyDoBnnoB3tmpL2HuAwATACIKYBEIRKgCmcJBdqF9AJ5ht1sQOOMie1g-8WogGpNQAK2oBMvVR1T6tTesJxk0AjUGkmTopZYyTUhyAGeVABoa9N6CwGTPeBwRgFo5QByyhVunNGZTGnCCAjAClygEAArppNHkh5DAXpBGAKlslIB72O5BClmqpgs-NEA5JqASUVDRKDiaTmbtRbqIA9F3adtVZN5GIkzKaLtxgAhzQCaTjd7Xd1XzpSNWTRrSKvWDHZitbFXYBcc0AlJqAau0jYDo376nVXqaZfHqIBkfMAPpb_SVFgDMYIh5mhYjj5txgEDtQDutsmG77-c6M7iRYAK-QHDqLw4rXZKV1oU6jQ9jq3nDiFgDpNcXehkztcSWUtGiATmNAPo2u5TB_LnaDJXPgBw5AuHCm39f3hyAE8VAA-KL9T_rpmMrqANBygDOiv-N5OnOn40IAtw6AM02S6Qau75HpWgCqeoAOXozJGaqodBd6jiUgBfet2y74Ucs5EcBuKALnagAqGoAphYoVRh7YhuNCAPA6jCsW-hEEGWAnoZx1CAGgWgB46fW068gAnC2vCQhYMIwcRDiAOQ6gBoynxGrCRxsHUIANlmACX-Okxmh-lqTQgAT8YA0W4sXhPpsRZLKiYAq44EoAb-5mcWeRAecrqST51EflZ1CAJn5gC29sF7GuQZgCbcoA6eYxS5gZhYA1oqAGbKgBMtilelxWFgD-kYA6Tp5WmVhCeVqm0Q-3bSSuRwAAwKWYUKWNVAW4o-uF7jyzn5WlNUOIAJjY9deBFVTRnUlIAz7baY5-4TYBI5DTQgAhnikC19fxk2hat1Dnt2ZXLR18KuoAx55bMdJYrdNDiAOwxgAziddfm3WduJXIA-Y4vcs_nvSUgBUVoAVXY_QGx4QAigBJeYA-Xmg6WsWDXdNCALaKgAQKvVlHZKCcytm1KlTf9DiWoAQcpw29cquoA2iFcltxpQbtIkGYA_qmAGVBZOnRTuKACNpgB7uuzBOcyU4WAAY2_N7Uj1CANBeDm9XTS03RzJ7UADgCBFmLjNheFgCxEerln7YZgCx6brBX7YAbYpjYO_UM3rEvtIA2k4RrLhby69isQ66gCfXoA4qle07r66dblUnQLSuAGa2SQY058jyTjiltu1Ifu7igAPNhbMlW8H4uEzQgBuGWnDU7ZnGv7YA_TbnsbiPZwdocV-DCJMcltPOxnCuJwiw2AJM2teVoAG26AHPq3eiYA-GaAByug8GYAHDZHU3_vmXpQet1ngsOCRgBdCZHi39AAbC1SntuTSuANXBgCAho740t67beurQgCLQePYWAC6KgBhaff-1soAH6mvxLgCZNrlM8AYvYuEtzyAGH9P-fsAGX0EgjOurpADldoAFhsN7bSoAADl3vHfGS8lYT0AMxpX8q6AF83Qyvtz6F0ATbKuj5ADyOgQ5eNBAAb5jTCB9Mi6UPodQQAz-6AGs7OhSsdSAF2QvhScSiADczJipDLbkKgUAqugAYlS_JI9O0jfoVRgZWQAG1kzWQXLfo6DY6tWUh2bBIiHAzRBv_VhFCTYS0ACfKgB582EQiXB54lEFwDmwmxVdABoHoATI03GYw8dYyuHDABfagPSxLtVFuwRIAMHsZZkKCTI9hStHyAF11JxrpAAGFhYlhUSsQL2SV4jhgALtJpIAB-UdHNwMBgvGxjZGlLpJE_ojUAB0-h9GpVgbiQA2rFIgSVIqgbSOkhQaUrQqgAQ1QGcooZ7TOkDW6SUQA_ubTPcRAYZ8zrbFKVoAQZSQGrMCesuZoyUmmJoI4fOhyNknO2Wc6gtiuZmWueo0SKzXB9zyS09phgXkGUAPN-gA5W0AAD6gBF5SqbPYZPyLKFOiRISqKxMDPAANyYAAPYAAdYA8FRYQJAaUsWwD4PIM4sAyAAA9YAOAYIAGQjAD8pioQASEoAB1CAsoAHIgEIAAKx4IQAA5hAAAglAEgvKeAAGdYBgDgDwYAZAIAABFZUSuxYQPcpKKUAGVYAAE8iVUFlAAMxxbATVPAABe2QAAsSxMg8D5dCagHBhCkrANQKwWJxU6AAEYatNbq_VIS7UOocM6wgrr3XGBWCscVZAwA8DIOKg1VhdXopKF6wg3qdBgElXuGA8AqD5pAHUaVUAeA6CTagZqNBZIAFYACk1Bnh1HFaisAlKIA6EIFAMghreVkCgHUMgJB0VcBAOKiVybGjGo4BWhwnLnWSrbZGthRK5V8ErfU6wYM5hgEag4YIDa_ZgAcI2I9YIeCkpINqvVxK5jYG9W2ntYAADqPAoCwC4FQYEcwAzYD4CAb1ZA-BTvSNgMAqL4CkocPAflLqeCZBXbYcIvzbB7tPee3dDh9CNUbTckJ4H900Bw3hrDxHgSkYOABoDIGCMEHRaiidWKcUOFRToWAE6e1-2wOikAUAy38qoM2e9EAJ1EvDVQQ1mRY2_ovVem9gbwYPqfXGt9H6v0QEbL-x4ajxAoYwOEJFQA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.5.0/files/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.5.0/files/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-gl/2/files/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts-stat/latest/files/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/4.9.0/files/map/js/china.js"></script>
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/4.9.0/files/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://registry.npmmirror.com/echarts/5.5.0/files/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    var data = [
+  {
+    name: '南京市',
+    children: [
+      {
+        name: '玄武区',
+        value: 7,
+        children: [
+      {
+        name: '梅园新村街道',
+        value: 1,
+      },
+      {
+        name: '新街口街道',
+        value: 1,
+      },
+      {
+        name: '玄武门街道',
+        value: 1,
+      },
+      {
+        name: '锁金村街道',
+        value: 1,
+      },
+      {
+        name: '红山街道',
+        value: 1,
+      },
+      {
+        name: '孝陵卫街道',
+        value: 1,
+      },
+      {
+        name: '玄武湖街道',
+        value: 1,
+      },
+    ]
+      },
+      {
+        name: '秦淮区',
+        value: 12,
+        children: [
+      {
+        name: '秦虹街道',
+        value: 1,
+      },
+      {
+        name: '夫子庙街道',
+        value: 1,
+      },
+      {
+        name: '红花街道',
+        value: 1,
+      },
+      {
+        name: '双塘街道',
+        value: 1,
+      },
+      {
+        name: '中华门街道',
+        value: 1,
+      },
+      {
+        name: '五老村街道',
+        value: 1,
+      },
+      {
+        name: '洪武路街道',
+        value: 1,
+      },
+      {
+        name: '大光路街道',
+        value: 1,
+      },
+      {
+        name: '瑞金路街道',
+        value: 1,
+      },
+      {
+        name: '月牙湖街道',
+        value: 1,
+      },
+      {
+        name: '光华路街道',
+        value: 1,
+      },
+      {
+        name: '朝天宫街道',
+        value: 1,
+      },
+    ]
+      },
+      {
+        name: '鼓楼区',
+        value: 13,
+        children: [
+      {
+        name: '宁海路街道',
+        value: 1,
+      },
+      {
+        name: '华侨路街道',
+        value: 1,
+      },
+      {
+        name: '湖南路街道',
+        value: 1,
+      },
+      {
+        name: '中央门街道',
+        value: 1,
+      },
+      {
+        name: '挹江门街道',
+        value: 1,
+      },
+      {
+        name: '江东街道',
+        value: 1,
+      },
+      {
+        name: '凤凰街道',
+        value: 1,
+      },
+      {
+        name: '下关街道',
+        value: 1,
+      },
+      {
+        name: '热河南路街道',
+        value: 1,
+      },
+      {
+        name: '幕府山街道',
+        value: 1,
+      },
+      {
+        name: '建宁路街道',
+        value: 1,
+      },
+      {
+        name: '宝塔桥街道',
+        value: 1,
+      },
+      {
+        name: '小市街道',
+        value: 1,
+      },
+    ]
+      },
+      {
+        name: '栖霞区',
+        value: 9,
+        children: [
+      {
+        name: '尧化街道',
+        value: 1,
+      },
+      {
+        name: '马群街道',
+        value: 1,
+      },
+      {
+        name: '迈皋桥街道',
+        value: 1,
+      },
+      {
+        name: '燕子矶街道',
+        value: 1,
+      },
+      {
+        name: '栖霞街道',
+        value: 1,
+      },
+      {
+        name: '龙潭街道',
+        value: 1,
+      },
+      {
+        name: '仙林街道',
+        value: 1,
+      },
+      {
+        name: '八卦洲街道',
+        value: 1,
+      },
+      {
+        name: '西岗街道',
+        value: 1,
+      },
+    ]
+      },
+      {
+        name: '江宁区',
+        value: 10,
+        children: [
+      {
+        name: '东山街道',
+        value: 1,
+      },
+      {
+        name: '汤山街道',
+        value: 1,
+      },
+      {
+        name: '淳化街道',
+        value: 1,
+      },
+      {
+        name: '禄口街道',
+        value: 1,
+      },
+      {
+        name: '江宁街道',
+        value: 1,
+      },
+      {
+        name: '秣陵街道',
+        value: 1,
+      },
+      {
+        name: '谷里街道',
+        value: 1,
+      },
+      {
+        name: '湖熟街道',
+        value: 1,
+      },
+      {
+        name: '横溪街道',
+        value: 1,
+      },
+      {
+        name: '麒麟街道',
+        value: 1,
+      },
+    ]
+      },
+      {
+        name: '六合区',
+        value: 12,
+        children: [
+      {
+        name: '大厂街道',
+        value: 1,
+      },
+      {
+        name: '葛塘街道',
+        value: 1,
+      },
+      {
+        name: '长芦街道',
+        value: 1,
+      },
+      {
+        name: '雄州街道',
+        value: 1,
+      },
+      {
+        name: '龙池街道',
+        value: 1,
+      },
+      {
+        name: '程桥街道',
+        value: 1,
+      },
+      {
+        name: '横梁街道',
+        value: 1,
+      },
+      {
+        name: '龙袍街道',
+        value: 1,
+      },
+      {
+        name: '马鞍街道',
+        value: 1,
+      },
+      {
+        name: '冶山街道',
+        value: 1,
+      },
+      {
+        name: '金牛湖街道',
+        value: 1,
+      },
+      {
+        name: '竹镇镇',
+        value: 1,
+      },
+    ]
+      },
+      {
+        name: '浦口区',
+        value: 9,
+        children: [
+      {
+        name: '泰山街道',
+        value: 1,
+      },
+      {
+        name: '顶山街道',
+        value: 1,
+      },
+      {
+        name: '沿江街道',
+        value: 1,
+      },
+      {
+        name: '江浦街道',
+        value: 1,
+      },
+      {
+        name: '桥林街道',
+        value: 1,
+      },
+      {
+        name: '汤泉街道',
+        value: 1,
+      },
+      {
+        name: '盘城街道',
+        value: 1,
+      },
+      {
+        name: '星甸街道',
+        value: 1,
+      },
+      {
+        name: '永宁街道',
+        value: 1,
+      },
+    ]
+      },
+      {
+        name: '建邺区',
+        value: 6,
+        children: [
+      {
+        name: '莫愁湖街道',
+        value: 1,
+      },
+      {
+        name: '南苑街道',
+        value: 1,
+      },
+      {
+        name: '兴隆街道',
+        value: 1,
+      },
+      {
+        name: '双闸街道',
+        value: 1,
+      },
+      {
+        name: '沙洲街道',
+        value: 1,
+      },
+      {
+        name: '江心洲街道',
+        value: 1,
+      },
+    ]
+      },
+      {
+        name: '溧水区',
+        value: 8,
+        children: [
+      {
+        name: '永阳街道',
+        value: 1,
+      },
+      {
+        name: '白马镇',
+        value: 1,
+      },
+      {
+        name: '东屏街道',
+        value: 1,
+      },
+      {
+        name: '柘塘街道',
+        value: 1,
+      },
+      {
+        name: '石湫街道',
+        value: 1,
+      },
+      {
+        name: '洪蓝街道',
+        value: 1,
+      },
+      {
+        name: '晶桥镇',
+        value: 1,
+      },
+      {
+        name: '和凤镇',
+        value: 1,
+      },
+    ]
+      },
+      {
+        name: '高淳区',
+        value: 8,
+        children: [
+      {
+        name: '淳溪街道',
+        value: 1,
+      },
+      {
+        name: '古柏街道',
+        value: 1,
+      },
+      {
+        name: '阳江镇',
+        value: 1,
+      },
+      {
+        name: '砖墙镇',
+        value: 1,
+      },
+      {
+        name: '固城街道',
+        value: 1,
+      },
+      {
+        name: '漆桥街道',
+        value: 1,
+      },
+      {
+        name: '东坝街道',
+        value: 1,
+      },
+      {
+        name: '桠溪街道',
+        value: 1,
+      },
+    ]
+      },
+      {
+        name: '雨花台区',
+        value: 7,
+        children: [
+      {
+        name: '雨花街道',
+        value: 0.78,
+      },
+      {
+        name: '赛虹桥街道',
+        value: 0.78,
+      },
+      {
+        name: '西善桥街道',
+        value: 0.78,
+      },
+      {
+        name: '板桥街道',
+        value: 0.78,
+      },
+      {
+        name: '铁心桥街道',
+        value: 0.78,
+      },
+      {
+        name: '梅山街道',
+        value: 0.78,
+      },
+      {
+        name: '古雄街道',
+        value: 0.78,
+      },
+      {
+        name: '板桥新城',
+        value: 0.77,
+      },
+      {
+        name: '经济开发区',
+        value: 0.77,
+      },
+    ]
+      },
+    ]
+  },
+  
+];
+option = {
+  title: {
+    text: '南京行政区划\n\nNanjing Administrative Division',
+    textStyle: {
+      fontSize: 14,
+      align: 'center'
+    },
+    subtextStyle: {
+      align: 'center'
+    },
+  },
+  series: {
+    type: 'sunburst',
+    data: data,
+    radius: [0, '95%'],
+    sort: undefined,
+    emphasis: {
+      focus: 'ancestor'
+    },
+    levels: [
+      {},
+      {
+        r0: '15%',
+        r: '35%',
+        itemStyle: {
+          borderWidth: 2
+        },
+        label: {
+          rotate: 'tangential'
+        }
+      },
+      {
+        r0: '35%',
+        r: '70%',
+      },
+      {
+        r0: '70%',
+        r: '72%',
+        label: {
+          position: 'outside',
+          padding: 3,
+          silent: false
+        },
+        itemStyle: {
+          borderWidth: 3
+        }
+      }
+    ]
+  }
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
